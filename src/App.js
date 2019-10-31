@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Header from "./components/Header"
+import Header from "./components/Header";
 
 const App = props => {
   const [mode,
@@ -26,7 +26,7 @@ const App = props => {
 
   return (
     <div className="App">
-      <Header onChangeMode={(mode) => setMode(mode)} data={menuItem}/>
+      <Header onChangeMode={mode => setMode(mode)} data={menuItem} />
     </div>
   );
 }
