@@ -18,22 +18,18 @@ const Header = props => {
   const [menuItem] = useState([
     {
       id: 1,
-      title: "홈",
-      href: "/"
-    }, {
-      id: 2,
       title: "청명이란",
       href: "/"
     }, {
-      id: 3,
+      id: 2,
       title: "청원하기",
       href: "/"
     }, {
-      id: 4,
+      id: 3,
       title: "나의 청원",
       href: "/"
     }, {
-      id: 5,
+      id: 4,
       title: "자주하는 질문",
       href: "/"
     }
