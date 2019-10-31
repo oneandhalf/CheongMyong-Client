@@ -9,37 +9,23 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
-import "./Header.css"
+import "./css/Header.css"
 
 const Header = props => {
   const [isOpen,
     setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const [menuItem] = useState([
-    {
-      id: 1,
-      title: "청명이란",
-      href: "/"
-    }, {
-      id: 2,
-      title: "청원하기",
-      href: "/"
-    }, {
-      id: 3,
-      title: "나의 청원",
-      href: "/"
-    }, {
-      id: 4,
-      title: "자주하는 질문",
-      href: "/"
-    }
-  ]);
 
+  let menuItem = props.data
   let _menuItem = [];
   for (let i = 0; i < menuItem.length; i++) {
     _menuItem.push(
       <NavItem key={menuItem[i].id}>
-        <NavLink href={menuItem[i].href}>{menuItem[i].title}</NavLink>
+        <NavLink
+          onClick={(e) => {
+          e.preventDefault();
+          props.onChangeMode(menuItem[i].desc);
+        }}>{menuItem[i].title}</NavLink>
       </NavItem>
     );
   }
@@ -48,7 +34,14 @@ const Header = props => {
     <div>
       <Navbar color="light" light expand="md" className="fixed-top">
         <Container>
-          <NavbarBrand href="/">Logo</NavbarBrand>
+          <NavbarBrand
+            href="/"
+            onClick={e => {
+            e.preventDefault();
+            props.onChangeMode("petitions");
+          }}>
+            Logo
+          </NavbarBrand>
           <NavbarToggler onClick={toggle}/>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
