@@ -50,7 +50,7 @@ const Header = props => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="md" className="fixed-top">
         <Container>
           <NavbarBrand href="/">Logo</NavbarBrand>
           <NavbarToggler onClick={toggle}/>
