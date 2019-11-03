@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Header from "./components/Header";
+import ContentView from "./components/ContentView";
 
 const App = props => {
   const [mode,
@@ -27,6 +28,7 @@ const App = props => {
   return (
     <div className="App">
       <Header onChangeMode={mode => setMode(mode)} menu={menuItem}/>
+      <ContentView mode={mode}/>
     </div>
   );
 }
