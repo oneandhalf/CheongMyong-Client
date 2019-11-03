@@ -26,7 +26,7 @@ const App = props => {
 
   return (
     <div className="App">
-      <Header onChangeMode={mode => setMode(mode)} data={menuItem} />
+      <Header onChangeMode={mode => setMode(mode)} menu={menuItem}/>
     </div>
   );
 }

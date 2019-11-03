@@ -16,7 +16,7 @@ const Header = props => {
     setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  let menuItem = props.data;
+  let menuItem = props.menu;
   let _menuItem = [];
   for (let i = 0; i < menuItem.length; i++) {
     _menuItem.push(
