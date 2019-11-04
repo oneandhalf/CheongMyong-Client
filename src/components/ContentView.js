@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Container} from "reactstrap";
 import "./assets/css/ContentView.css"
+import MainImg from "./MainImg";
 
 const ContentView = props => {
   const [content,
@@ -9,7 +10,7 @@ const ContentView = props => {
 
   return (
     <Container fluid={true} className="cont-fluid">
-      
+      <MainImg/>
     </Container>
   );
 }
