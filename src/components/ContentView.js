@@ -19,8 +19,7 @@ const ContentView = props => {
       _content.push(<MainImg/>);
       break;
     default:
-      _content.push(
-        <MainImg/>, < PetitionsView/>);
+      _content.push(<MainImg key={"1"}/>, <PetitionsView key={"2"}/>);
       break;
   }
 
