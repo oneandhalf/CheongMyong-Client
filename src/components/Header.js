@@ -24,6 +24,7 @@ const Header = props => {
         <NavLink
           onClick={(e) => {
           e.preventDefault();
+          setIsOpen(false);
           props.onChangeMode(menuItem[i].desc);
         }}>{menuItem[i].title}</NavLink>
       </NavItem>
