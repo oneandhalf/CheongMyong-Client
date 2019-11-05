@@ -2,8 +2,14 @@ import React, {useState} from "react";
 import {Nav, NavItem, NavLink} from "reactstrap";
 import classNames from "classnames";
 import "./assets/css/PetitionsView.css";
+import FieldView from "./FieldView"
+import RecommendView from "./RecommendView";
+import ReplyView from "./ReplyView";
 
 const PetitionsView = props => {
+  const [pMode,
+    setPMode] = useState("Field");
+
   const [pMenu] = useState([
     {
       id: 1,
@@ -20,7 +26,9 @@ const PetitionsView = props => {
     }
   ]);
 
-  const [pMenuOn, setPMenuOn] = useState([true, false, false]);
+  const [pMenuOn,
+    setPMenuOn] = useState([true, false, false]);
+    
   let bList = [false, false, false];
 
   let _pMenu = [];
@@ -32,8 +40,8 @@ const PetitionsView = props => {
         <NavLink
           onClick={e => {
           e.preventDefault();
-          
           bList.splice(i, 1, true);
+          setPMode(pMenu[i].desc);
           setPMenuOn(bList);
         }}>
           {pMenu[i].title}
@@ -41,11 +49,26 @@ const PetitionsView = props => {
       </NavItem>
     );
   }
+
+  let _pView = [];
+  switch (pMode) {
+    case "Recommend":
+      _pView.push(<RecommendView/>);
+      break;
+    case "Reply":
+      _pView.push(<ReplyView/>);
+      break;
+    default:
+      _pView.push(<FieldView/>);
+      break;
+  }
+
   return (
     <div className="PetitionsView">
       <Nav>
         {_pMenu}
       </Nav>
+      {_pView}
     </div>
   );
 }
