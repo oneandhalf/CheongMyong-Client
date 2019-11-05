@@ -28,7 +28,7 @@ const PetitionsView = props => {
 
   const [pMenuOn,
     setPMenuOn] = useState([true, false, false]);
-    
+
   let bList = [false, false, false];
 
   let _pMenu = [];
