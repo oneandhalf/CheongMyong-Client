@@ -1,8 +1,129 @@
 .header-bg {
-  height: 25em;
   background-image:
     url('../images/bg-lightlampmj.jpg');
   background-size: cover;
   background-position: bottom;
   position: relative;
+}
+
+.header-width {
+  height: 25em;
+}
+
+.header-cont {
+  position: absolute;
+  z-index: 3;
+  text-align: left;
+}
+
+.cont-txt {
+  left: 5em;
+  bottom: 3em;
+}
+
+.header-title {
+  color: white;
+}
+
+.title-size {
+  font-size: 40px;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translatey(-20px);
+    -moz-transform: translatey(-20px);
+    -o-transform: translatey(-20px);
+    transform: translatey(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+    -moz-transform: translatey(0);
+    -o-transform: translatey(0);
+    transform: translatey(0);
+  }
+}
+
+@-moz-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translatey(-20px);
+    -moz-transform: translatey(-20px);
+    -o-transform: translatey(-20px);
+    transform: translatey(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+    -moz-transform: translatey(0);
+    -o-transform: translatey(0);
+    transform: translatey(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translatey(-20px);
+    -moz-transform: translatey(-20px);
+    -o-transform: translatey(-20px);
+    transform: translatey(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+    -moz-transform: translatey(0);
+    -o-transform: translatey(0);
+    transform: translatey(0);
+  }
+}
+
+.in-down {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@media (max-width: 767px) {
+  .title-size {
+    font-size: 35px;
+  }
+
+  .header-width {
+    height: 20em;
+  }
+
+  .cont-txt {
+    left: 3em;
+    bottom: 2em;
+  }
+}
+
+@media (max-width: 424px) {
+  .title-size {
+    font-size: 30px;
+  }
+
+  .header-width {
+    height: 15em;
+  }
+
+  .cont-txt {
+    left: 2em;
+    bottom: 1em;
+  }
 }
