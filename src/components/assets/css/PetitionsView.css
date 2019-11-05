@@ -1,0 +1,17 @@
+.petitions-menubar {
+  width: 33.333333%;
+  height: 3.5em;
+  font-weight: bold;
+  text-align: center;
+  color: grey;
+  border-bottom: 2px solid grey;
+}
+
+.petitions-menubar:hover {
+  color: #003366;
+  border-bottom: 4px solid #003366;
+}
+
+.petitions-menubar a {
+  margin-top: 0.5em;
+}
