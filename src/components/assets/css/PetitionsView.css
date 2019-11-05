@@ -7,7 +7,7 @@
   border-bottom: 2px solid grey;
 }
 
-.petitions-menubar:hover {
+.petitions-menubar:hover, .on {
   color: #003366;
   border-bottom: 4px solid #003366;
 }
