@@ -2,6 +2,7 @@ import React from "react";
 import {Container} from "reactstrap";
 import "./assets/css/ContentView.css"
 import MainImg from "./MainImg";
+import Introduce from "./Introduce";
 import PetitionsView from "./PetitionsView";
 
 const ContentView = props => {
@@ -16,7 +17,7 @@ const ContentView = props => {
 
       break;
     case "introduce":
-      _content.push(<MainImg/>);
+      _content.push(<MainImg key={"1"} />, <Introduce key={"2"} />);
       break;
     default:
       _content.push(<MainImg key={"1"}/>, <PetitionsView key={"2"}/>);
