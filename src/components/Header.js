@@ -16,17 +16,31 @@ const Header = props => {
     setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  let menuItem = props.menu;
+  const [menuItem] = useState([
+    {
+      id: 1,
+      title: "청명이란",
+      href: "/introduce"
+    }, {
+      id: 2,
+      title: "청원하기",
+      href: "/"
+    }, {
+      id: 3,
+      title: "나의 청원",
+      href: "/MyPage"
+    }, {
+      id: 4,
+      title: "자주하는 질문",
+      href: "/FAQ"
+    }
+  ]);
+
   let _menuItem = [];
   for (let i = 0; i < menuItem.length; i++) {
     _menuItem.push(
       <NavItem key={menuItem[i].id}>
-        <NavLink
-          onClick={(e) => {
-          e.preventDefault();
-          setIsOpen(false);
-          props.onChangeMode(menuItem[i].desc);
-        }}>{menuItem[i].title}</NavLink>
+        <NavLink href={menuItem[i].href}>{menuItem[i].title}</NavLink>
       </NavItem>
     );
   }
@@ -35,12 +49,7 @@ const Header = props => {
     <div>
       <Navbar color="light" light expand="md" className="fixed-top">
         <Container>
-          <NavbarBrand
-            href="/"
-            onClick={e => {
-            e.preventDefault();
-            props.onChangeMode("petitions");
-          }}>
+          <NavbarBrand href="/">
             Logo
           </NavbarBrand>
           <NavbarToggler onClick={toggle}/>
