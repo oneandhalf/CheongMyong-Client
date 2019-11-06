@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Nav, NavItem, NavLink} from "reactstrap";
 import classNames from "classnames";
 import "./assets/css/PetitionsView.css";
+import MainImg from "./MainImg";
 import FieldView from "./FieldView"
 import RecommendView from "./RecommendView";
 import ReplyView from "./ReplyView";
@@ -65,6 +66,7 @@ const PetitionsView = props => {
 
   return (
     <div className="PetitionsView">
+      <MainImg/>
       <Nav>
         {_pMenu}
       </Nav>
