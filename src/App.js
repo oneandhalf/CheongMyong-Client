@@ -7,7 +7,6 @@ import PetitionsView from "./components/PetitionsView";
 import MyPage from "./components/MyPage";
 import FAQ from "./components/FAQ";
 
-
 const App = props => {
   return (
     <Router>
