@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import PetitionsView from "./PetitionsView";
 
 const ReplyView = props => {
   return (
     <div className="ReplyView">
-      
+      <PetitionsView pMenuID={2} />
     </div>
   );
 };
