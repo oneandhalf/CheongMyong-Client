@@ -24,7 +24,7 @@ const Header = props => {
     }, {
       id: 2,
       title: "청원하기",
-      href: "/petitions"
+      href: "/field"
     }, {
       id: 3,
       title: "나의 청원",
