@@ -20,11 +20,11 @@ const Header = props => {
     {
       id: 1,
       title: "청명이란",
-      href: "/introduce"
+      href: "/"
     }, {
       id: 2,
       title: "청원하기",
-      href: "/"
+      href: "/petitions"
     }, {
       id: 3,
       title: "나의 청원",

@@ -14,8 +14,8 @@ const App = props => {
         <Header />
         <Switch>
           <div className="view-comp">
-            <Route exact path="/" component={PetitionsView} />
-            <Route path="/introduce" component={Introduce} />
+            <Route exact path="/" component={Introduce} />
+            <Route path="/petitions" component={PetitionsView} />
             <Route path="/MyPage" component={MyPage} />
             <Route path="/FAQ" component={FAQ} />
           </div>
