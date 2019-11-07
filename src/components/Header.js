@@ -47,12 +47,15 @@ const Header = props => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" className="fixed-top">
+      <Navbar
+        color="light"
+        light
+        expand="md"
+        className="fixed-top shadow"
+      >
         <Container>
-          <NavbarBrand href="/">
-            Logo
-          </NavbarBrand>
-          <NavbarToggler onClick={toggle}/>
+          <NavbarBrand href="/">Logo</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               {_menuItem}
