@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import PetitionsView from "./PetitionsView";
 
 const FieldView = props => {
-  return(
+  return (
     <div className="FieldView">
-      
+      <PetitionsView pMenuID={0}/>
     </div>
   );
 }
