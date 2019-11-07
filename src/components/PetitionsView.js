@@ -3,47 +3,37 @@ import {Nav, NavItem, NavLink} from "reactstrap";
 import classNames from "classnames";
 import "./assets/css/PetitionsView.css";
 import MainImg from "./MainImg";
-import FieldView from "./FieldView"
-import RecommendView from "./RecommendView";
-import ReplyView from "./ReplyView";
 
 const PetitionsView = props => {
-  const [pMode,
-    setPMode] = useState("Field");
-
   const [pMenu] = useState([
     {
       id: 1,
       title: "분야별 청원",
-      desc: "Field"
+      href: "/field"
     }, {
       id: 2,
       title: "추천순 청원",
-      desc: "Recommend"
+      href: "/recommend"
     }, {
       id: 3,
       title: "답변된 청원",
-      desc: "Reply"
+      href: "/reply"
     }
   ]);
 
-  const [pMenuOn,
-    setPMenuOn] = useState([true, false, false]);
-
+  let {pMenuID} = props;
   let bList = [false, false, false];
+  bList.splice(pMenuID, 1, true);
 
   let _pMenu = [];
   for (let i = 0; i < pMenu.length; i++) {
     _pMenu.push(
       <NavItem
         key={pMenu[i].id}
-        className={classNames("petitions-menubar", {on: pMenuOn[i]})}>
+        className={classNames("petitions-menubar in-left", {on: bList[i]})}>
         <NavLink
           onClick={e => {
-          e.preventDefault();
-          bList.splice(i, 1, true);
-          setPMode(pMenu[i].desc);
-          setPMenuOn(bList);
+          document.location.href = pMenu[i].href;
         }}>
           {pMenu[i].title}
         </NavLink>
@@ -51,26 +41,10 @@ const PetitionsView = props => {
     );
   }
 
-  let _pView = [];
-  switch (pMode) {
-    case "Recommend":
-      _pView.push(<RecommendView/>);
-      break;
-    case "Reply":
-      _pView.push(<ReplyView/>);
-      break;
-    default:
-      _pView.push(<FieldView/>);
-      break;
-  }
-
   return (
     <div className="PetitionsView">
       <MainImg/>
-      <Nav>
-        {_pMenu}
-      </Nav>
-      {_pView}
+      <Nav>{_pMenu}</Nav>
     </div>
   );
 }
