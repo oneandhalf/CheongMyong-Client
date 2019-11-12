@@ -1,5 +1,5 @@
 import React from "react";
-import MainImg from "./MainImg";
+import MainImg from "../MainImg";
 
 const Introduce = props => {
   return (

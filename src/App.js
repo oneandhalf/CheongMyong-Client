@@ -2,12 +2,12 @@ import React, {Fragment} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Introduce from "./components/Introduce";
-import MyPage from "./components/MyPage";
-import FAQ from "./components/FAQ";
-import FieldView from "./components/FieldView";
-import RecommendView from "./components/RecommendView";
-import ReplyView from "./components/ReplyView";
+import Introduce from "./components/Introduce/Introduce";
+import MyPage from "./components/User/MyPage";
+import FAQ from "./components/Questions/FAQ";
+import FieldView from "./components/Petitions/FieldView";
+import RecommendView from "./components/Petitions/RecommendView";
+import ReplyView from "./components/Petitions/ReplyView";
 
 const App = props => {
   return (

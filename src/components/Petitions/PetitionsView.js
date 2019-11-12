@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Nav, NavItem, NavLink} from "reactstrap";
 import classNames from "classnames";
-import "./assets/css/PetitionsView.css";
-import MainImg from "./MainImg";
+import "../assets/css/PetitionsView.css";
+import MainImg from "../MainImg";
 
 const PetitionsView = props => {
   const [pMenu] = useState([
