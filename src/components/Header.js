@@ -28,11 +28,11 @@ const Header = props => {
     }, {
       id: 3,
       title: "나의 청원",
-      href: "/MyPage"
+      href: "/user"
     }, {
       id: 4,
       title: "자주하는 질문",
-      href: "/FAQ"
+      href: "/questions"
     }
   ]);
 
