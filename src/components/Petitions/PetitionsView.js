@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {Nav, NavItem, NavLink} from "reactstrap";
+import {NavLink} from "react-router-dom";
+import {Nav, NavItem} from "reactstrap";
 import classNames from "classnames";
 import "../assets/css/PetitionsView.css";
 import MainImg from "../MainImg";
@@ -32,8 +33,10 @@ const PetitionsView = props => {
         key={pMenu[i].id}
         className={classNames("petitions-menubar in-left", {on: bList[i]})}>
         <NavLink
-          onClick={e => {
-          document.location.href = pMenu[i].href;
+          to={pMenu[i].href}
+          className="nav-link"
+          activeStyle={{
+          color: "#003366"
         }}>
           {pMenu[i].title}
         </NavLink>
