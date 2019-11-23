@@ -3,18 +3,21 @@
   height: 3.5em;
   font-weight: bold;
   text-align: center;
-  color: grey;
   border-bottom: 2px solid grey;
+}
+
+.petitions-menubar a {
+  color: grey;
+  margin-top: 0.5em;
 }
 
 .petitions-menubar:hover,
 .on {
-  color: #003366;
   border-bottom: 4px solid #003366;
 }
 
-.petitions-menubar a {
-  margin-top: 0.5em;
+.petitions-menubar:hover a {
+  color: #003366;
 }
 
 @-webkit-keyframes fadeInLeft {
