@@ -12,21 +12,19 @@ import ReplyView from "./components/Petitions/ReplyView";
 const App = props => {
   return (
     <Router>
-      <div className="App">
-        <Header/>
-        <Switch>
-          <Fragment>
-            <div className="view-comp">
-              <Route exact path="/" component={Introduce}/>
-              <Route path="/field" component={FieldView}/>
-              <Route path="/recommend" component={RecommendView}/>
-              <Route path="/reply" component={ReplyView}/>
-              <Route path="/user" component={MyPage}/>
-              <Route path="/questions" component={FAQ}/>
-            </div>
-          </Fragment>
-        </Switch>
-      </div>
+      <Header/>
+      <Switch>
+        <Fragment>
+          <div className="view-comp">
+            <Route exact path="/" component={Introduce}/>
+            <Route path="/field" component={FieldView}/>
+            <Route path="/recommend" component={RecommendView}/>
+            <Route path="/reply" component={ReplyView}/>
+            <Route path="/user" component={MyPage}/>
+            <Route path="/questions" component={FAQ}/>
+          </div>
+        </Fragment>
+      </Switch>
     </Router>
   );
 }
