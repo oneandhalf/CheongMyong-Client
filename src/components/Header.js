@@ -1,13 +1,12 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import {
   Container,
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
-  NavItem,
-  NavLink
+  NavItem
 } from "reactstrap";
 import "./assets/css/Header.css"
 
@@ -15,6 +14,7 @@ const Header = props => {
   const [isOpen,
     setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const onClickLink = () => setIsOpen(false);
 
   const [menuItem] = useState([
     {
@@ -40,22 +40,21 @@ const Header = props => {
   for (let i = 0; i < menuItem.length; i++) {
     _menuItem.push(
       <NavItem key={menuItem[i].id}>
-        <NavLink href={menuItem[i].href}>{menuItem[i].title}</NavLink>
+        <Link to={menuItem[i].href} className="nav-link" onClick={onClickLink}>
+          {menuItem[i].title}
+        </Link>
       </NavItem>
     );
   }
 
   return (
-    <div>
-      <Navbar
-        color="light"
-        light
-        expand="md"
-        className="fixed-top shadow"
-      >
+    <div className="Header">
+      <Navbar color="light" light expand="md" className="fixed-top shadow">
         <Container>
-          <NavbarBrand href="/">Logo</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          <Link to="/" onClick={onClickLink}>
+            Logo
+          </Link>
+          <NavbarToggler onClick={toggle}/>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               {_menuItem}
